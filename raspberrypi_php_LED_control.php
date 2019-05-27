@@ -10,13 +10,13 @@
                  <input type="submit" value="OFF" name="off">
          </form>
          <?php
-         $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 17 out");
+         $setmode17 = shell_exec("/usr/local/bin/gpio -g mode 18 out");
          if(isset($_GET['on'])){
-                 $gpio_on = shell_exec("/usr/local/bin/gpio -g write 17 1");
+                 $gpio_on = shell_exec("/usr/local/bin/gpio -g write 18 1");
                  echo "LED is on";
          }
          else if(isset($_GET['off'])){
-                 $gpio_off = shell_exec("/usr/local/bin/gpio -g write 17 0");
+                 $gpio_off = shell_exec("/usr/local/bin/gpio -g write 18 0");
                  echo "LED is off";
          }
          ?>
